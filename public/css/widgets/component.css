@@ -1,0 +1,190 @@
+
+
+/* Follow Unfollow */
+.profile-tabbar .tab{
+	margin-left: 42%;
+	margin-right: auto;
+	float: left;
+}
+.profile-tabbar .userfollow{
+	float: right;
+	width:12%;
+}
+.profile-tabbar .userfollow button{
+	float: right;
+	width: 95%;
+	margin: 10px 0 0 5px;
+}
+.profile-tabbar .connection-count{
+	float:right;
+	width:29%;
+}
+.profile-tabbar .connection-count button{
+	float: right;
+	width: 47%;
+	margin: 10px 4px 0 4px;
+}
+/* Mutual follow */
+.mutual{
+	padding: 16px;
+	float: left;
+	width: 96.6%;
+	margin: 0;
+}
+.mutual li{
+	float: left;
+	list-style: none;
+	margin: 0 5px 10px 5px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;}
+.mutual li img{
+	border-radius: 50%;
+	cursor:pointer;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#people-content h4 span{
+	float:right;
+	margin:0 15px 0 0;
+}
+
+/* notification body alerts */
+.notibody #notification{
+	padding: 10px 15px 0 15px;
+	float: left;
+	width: 93%;
+	height:230px;
+	overflow-y:auto;
+}
+
+.notibody #notification li{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	border-bottom: 1px solid rgba(255,99,102,0.2);
+	width: 100%;
+	float: left;
+	background:#fff;
+}
+.notibody #notification li div.notiprofile{
+	float: left;
+	border-radius: 50%;
+	margin: 0 20px;
+	cursor: pointer;
+	margin-top: 6px;
+	height: 60px; 
+	width: 60px; 
+	display: inline-block;
+	background-position: center center;
+    background-size: cover;
+}
+.notibody #notification li span{
+	float: left;
+	width: 63%;
+	padding: 25px 0 0 0;
+	text-align: left;
+	color: #474747;
+}
+.notibody #notification li button img{
+	margin: 0 auto;
+	float: none;
+	border-radius:0;
+}
+.notibody #notification li button{
+	float: right;
+	width: 10%;
+	background:#ff6f65;
+	border: none;
+}
+
+.notibody #notification li button:focus {
+    -webkit-appearance: none; /*Safari/Chrome*/
+    -moz-appearance: none; /*Firefox*/
+    -ms-appearance: none; /*IE*/
+    -o-appearance: none; /*Opera*/
+    appearance: none;
+    -webkit-border-radius: 0; 
+}
+
+.notibody #notification li button:focus { outline:0 !important; background-color: none;}
+
+
+.notibody #notification li span{
+	float: left;
+	width: 60%;
+	padding: 24px 0 0 0;
+	text-align: left;
+	color: #474747;
+	font-size:16px;
+	font-family:'Roboto', sans-serif;
+}
+
+@media all and (min-width: 728px) {
+	.notibody #notification{
+		padding:  4px 14px 4px 16px;
+		width: 92%;
+	}
+    .notibody #notification li{
+        height: 60px;
+    }
+     .notibody #notification li div.notiprofile{
+        width: 50px;
+        height: 50px;     
+     }
+	.notibody #notification li span{
+		font-size: 13px;
+		width: 60%;
+		margin-top: 0px;
+	}
+	.notibody #notification li img{
+		margin:0px 0px 0px 0px;
+	}
+	.notibody #notification li button{
+		width: 11%;
+		height: 60px;
+		margin-top: 0px;
+	}
+	.notibody #notification li button img{
+		width: 16px;
+		height: 16px;
+	}		
+}
+
+@media all and (max-width: 727px)  {
+	.notibody #notification{
+		padding:  4px 4px 4px 12px;
+		width: 92%;
+	}	
+    .notibody #notification li{
+        height: 50px;
+    }
+     .notibody #notification li div.notiprofile{
+        width: 35px;
+        height: 35px;     
+     }
+	.notibody #notification li span{
+		font-size: 11px;
+		width: 70%;
+		margin-top: -5px;
+	}
+	.notibody #notification li img{
+		margin:0px 0px 0px 0px;
+	}
+	.notibody #notification li button{
+		width: 11%;
+		height: 50px;
+		margin-top: -32px;
+	}
+	.notibody #notification li button img{
+		width: 16px;
+		height: 16px;
+	}		
+}
+@media all and (max-width: 559px) {
+	.md-modal{
+		display:none;
+	}
+}

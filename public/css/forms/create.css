@@ -1,0 +1,58 @@
+@viewport{
+    width: device-width;}
+    
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic);
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,700italic,900);
+
+/*  Body & Page Fonts */ 
+
+.nav-list {
+	display: none;
+}
+
+#menu { 
+	display: none;
+}
+
+.mobilenav { 
+	display: none;
+}
+
+html, body{
+  background-color: none;
+  background-image: none;
+  min-height:100%;
+  margin: 0;
+  padding: 0;
+  color: #474747;
+  font-weight: normal;}  
+  
+#ccpage { background-color: #3F51B5; }  
+#cepage { background-color: #03A9F4; }   
+#pagelist { background-color: #ff6f65;} 
+  
+    
+#createform { margin: auto; margin-top: 10%; }
+
+
+@media all and (max-width: 568px) {   
+
+#createform { margin: auto; margin-top: 15%; }
+
+
+/* SEARCHBAR */ 
+
+.search { display: none; }
+
+.search .wd-search { display: none; }
+
+.nav-list { display: block; }
+
+#menu { display: block; }
+
+.mobilenav { display: block; }
+
+}  
+  
+  

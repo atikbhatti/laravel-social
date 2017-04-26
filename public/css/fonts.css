@@ -1,0 +1,55 @@
+@viewport{ width: device-width;}
+       
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,700italic,900);
+
+h1, h2, h3, h4, h5, h6, p { 
+	font-family: 'Roboto', sans-serif;
+	color: #424242;}
+
+@media all and (min-width: 1200px) {   
+	
+p { font-size: 14px; font-weight: 400;}
+h1 { font-weight: 400; font-size: 46px;}
+h2 { font-weight: 400;font-size: 42px;}
+h3 { font-weight: 400;font-size: 36px;}
+h4  { font-weight: 300; font-size: 32px;}
+h5 { font-weight: 300; font-size: 26px;}
+h6  { font-weight: 300; font-size: 24px;}
+
+}
+
+@media all and (max-width: 1199px) {   
+
+p { font-size: 13px; font-weight: 400;}
+h1 { font-weight: 400; font-size: 42px;}
+h2 { font-weight: 400;font-size: 38px;}
+h3 { font-weight: 400;font-size: 32px;}
+h4  { font-weight: 300; font-size: 28px;}
+h5 { font-weight: 300; font-size: 24px;}
+h6  { font-weight: 300; font-size: 18px;}
+
+}
+
+@media all and (max-width: 727px) {   
+
+p { font-size: 12px; font-weight: 400;}
+h1 { font-weight: 400; font-size: 40px;}
+h2 { font-weight: 400;font-size: 36px;}
+h3 { font-weight: 400;font-size: 30px;}
+h4  { font-weight: 300; font-size: 26px;}
+h5 { font-weight: 300; font-size: 22px;}
+h6  { font-weight: 300; font-size: 16px;}
+
+}
+
+@media all and (max-width: 560px) {   
+
+p { font-size: 12px; font-weight: 400;}
+h1 { font-weight: 400; font-size: 40px;}
+h2 { font-weight: 400;font-size: 36px;}
+h3 { font-weight: 400;font-size: 30px;}
+h4  { font-weight: 300; font-size: 26px;}
+h5 { font-weight: 300; font-size: 22px;}
+h6  { font-weight: 300; font-size: 16px;}
+
+}

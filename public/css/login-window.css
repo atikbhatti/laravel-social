@@ -1,0 +1,209 @@
+/* General styles for the modal */
+
+/* 
+Styles for the html/body for special modal where we want 3d effects
+Note that we need a container wrapping all content on the page for the 
+perspective effects (not including the modals and the overlay).
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,700italic,900);
+
+h1, h2, h3, h4, h5, h6, p { 
+	font-family: 'Roboto', sans-serif;
+}
+
+input, textarea, button {
+    -webkit-appearance: none; /*Safari/Chrome*/
+    -moz-appearance: none; /*Firefox*/
+    -ms-appearance: none; /*IE*/
+    -o-appearance: none; /*Opera*/
+    appearance: none;
+    -webkit-border-radius: 0; 
+}
+input:-webkit-autofill {
+    background-color: #fff !important;
+}
+input: focus { outline:0 !important; background-color: none;}
+
+.login-box { margin: 0; margin-top: -2em; padding: 0;}
+.md-content .submit { 
+	bottom: -8em;
+	right: -15em;
+}
+
+.fblogin>input{ margin-top: 0.6em; margin-left: -0.8em; width:105%; height: 35px; background:#005caa; color:#ffffff; border:none; padding:7px 0; text-align:center;cursor:pointer}
+.fblogin>input:focus {outline:0 !important;}
+
+.md-perspective,
+.md-perspective body {
+	height: 100%;
+	overflow: hidden;
+}
+
+.forgot { float: right; margin-top: 0em; font-size: 11px;}
+.form-box .forgot { margin-top:0;}
+.form-box .forgot p { margin-top: -0.3em;}
+.forgot a p { font-size: 11px;}
+
+
+
+.md-perspective body  {
+	background: #222;
+	-webkit-perspective: 600px;
+	-moz-perspective: 600px;
+	perspective: 600px;
+}
+
+.container {
+	background: #ff5f65;
+	min-height: 100%;
+	text-align: center;
+}
+
+.md-modal {
+	position: fixed;
+	top: 50%;
+	left: 48%;
+	margin: auto;
+	width: 400px;
+	height: 420px;
+	z-index: 2000;
+    box-shadow:  0px 4px 2px 2px rgba(0,0,0,0.1);
+	visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+}
+@media all and (max-width: 568px) {  
+	
+.md-modal {
+	width: 300px;
+	height: 320px;}
+
+.md-content .submit { 
+	bottom: -4.4em;
+	right: -10em;}
+
+}
+
+.md-show {
+	visibility: visible;
+}
+
+.md-overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	opacity: 0;
+  background: -webkit-linear-gradient(left top, rgba(255,92,106,0.9), rgba(255,119,85,0.9)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, rgba(255,92,106,0.9), rgba(255,119,85,0.9)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, rgba(255,92,106,0.9), rgba(255,119,85,0.9)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, rgba(255,92,106,0.9), rgba(255,119,85,0.9)); /* Standard syntax */
+ -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.md-show ~ .md-overlay {
+	opacity: 1;
+	visibility: visible;
+}
+
+/* Content styles */
+.md-content {
+	color: #000;
+	background: #fff;
+	position: relative;
+	border-radius: 2px;
+	margin: auto;
+	padding: 1em;
+	width: 100%;
+	height: 100%;
+}
+
+.form-logo {float: none; text-align: center; margin: auto; margin-left: auto; margin-right: auto; padding: 0; }
+.logo {  width: 60%; margin-top: -2em;}
+
+.md-content h3 {
+	margin: 0;
+	padding: 0em;
+	margin-top: -1em;
+	text-align: center;
+	font-size: 1.2em;
+	font-weight: 300;
+	background: #fff;
+	border-radius: 0;
+	color: #474747;
+	float: none;
+}
+
+.md-content > div {
+	padding: 1em;
+	margin: auto;
+	font-weight: 300;
+	font-size: 1.15em;
+}
+
+.md-content > div p {
+	margin: 0;
+	margin-left: 2em;
+	padding: 0;
+	color: #474747;
+}
+
+.md-content > div ul {
+	margin: 0;
+	padding: 0px;
+}
+
+.md-content > div ul li {
+	padding: 0;
+}
+
+/* Effect 16:  Blur */
+.md-show.md-effect-16 ~ .md-overlay {
+  background: -webkit-linear-gradient(left top, rgba(255,92,106,0.9), rgba(255,119,85,0.9)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, rgba(255,92,106,0.9), rgba(255,119,85,0.9)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, rgba(255,92,106,0.9), rgba(255,119,85,0.9)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, rgba(255,92,106,0.9), rgba(255,119,85,0.9)); /* Standard syntax */}
+
+.md-show.md-effect-16 ~ .container {
+	-webkit-filter: blur(3px);
+	-moz-filter: blur(3px);
+	filter: blur(3px);
+}
+
+.md-effect-16 .md-content {
+	-webkit-transform: translateY(-5%);
+	-moz-transform: translateY(-5%);
+	-ms-transform: translateY(-5%);
+	transform: translateY(-5%);
+	opacity: 0;
+}
+
+.md-show.md-effect-16 ~ .container,
+.md-effect-16 .md-content {
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.md-show.md-effect-16 .md-content {
+	-webkit-transform: translateY(0);
+	-moz-transform: translateY(0);
+	-ms-transform: translateY(0);
+	transform: translateY(0);
+	opacity: 1;
+}
+
+
+/*new css*/
+.form-click .checkbox { position:relative; margin:0; padding:0; float:left;}

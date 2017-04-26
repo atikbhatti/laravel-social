@@ -1,0 +1,298 @@
+@viewport{width: device-width;}
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:200,400,100,300,500,700,700italic,900);
+
+#signinForm div {
+  position: relative;
+  width: 350px;
+  margin: auto;
+  margin-top: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400; 
+}
+
+
+textarea{
+  resize: none;
+  overflow: auto;
+  font-weight: 400;
+}
+
+.text-input{
+	display: block;
+	width: 100%;
+	margin: 0;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  font-size: 16px;
+  font-weight: 400;
+  padding: 8px 0px;
+}
+
+.text-input[disabled]{
+  border-bottom: 1px dashed rgba(0,0,0, 0.12);
+  background-color: transparent;
+}
+
+
+.text-input ~ label{
+  font-size: 16px;
+  width: 100%;
+  position: absolute;
+  pointer-events: none;
+  left: 0;
+  top: 10px;
+  bottom: 0px;
+  color: rgba(0, 0, 0, 0.26);
+  font-weight: 300;
+  
+}
+
+.text-input.floating-label ~label{
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+.text-input:focus {
+  outline: none;
+  font-weight: 300;
+  
+}
+
+.text-input ~ label:after{
+  font-weight: 300;
+	
+  content: '';
+  background-color: #2979FF;
+  height: 2px;
+  width: 10px;
+  bottom: 0;
+  left: 45%;
+  visibility: hidden;
+  position: absolute;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+  font-weight: 300;  }
+
+.text-input:focus ~ label:after{
+  visibility: visible;
+  width: 100%;
+  left: 0;
+}
+
+.text-input.dirty ~ label{
+  visibility: hidden;
+}
+
+.text-input.floating-label:focus ~ label,
+.text-input.floating-label.dirty ~ label{
+  visibility: visible;
+  top: -10px;
+  font-size: 12px;
+  color: #2978ff;
+}
+
+.text-input.floating-label:invalid ~ label{
+  top: -10px;
+  font-size: 12px;
+  color: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.error{
+	float: left;
+  margin-top: 3px;
+  color: 1px solid rgba(0, 0, 0, 0.12);
+  font-size: 12px;
+  visibility: hidden;
+}
+
+.text-input:invalid ~label:after{
+  background-color: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.text-input:invalid ~.error{
+  visibility: visible;
+}
+
+.text-input:invalid{
+  box-shadow: none;
+  border-color: 1px solid rgba(0, 0, 0, 0.12); 
+}
+
+.inputClone, .maxHeight {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  padding: 0.5em 0;
+}
+
+/* Toggle */ 
+
+
+.paper-toggle{
+  clear: both;
+  margin: 20px 0;
+}
+
+.paper-toggle input:empty
+{
+	margin-left: -999px;
+}
+
+.paper-toggle input:empty ~ label
+{
+	position: relative;
+	float: left;
+	line-height: 1.6em;
+	width: 150px;
+	cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.paper-toggle input:empty ~ label:before, 
+.paper-toggle input:empty ~ label:after
+{
+  position: absolute;
+	display: block;
+  content: ' ';
+  -webkit-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
+}
+
+.paper-toggle input:empty ~ label:before
+{
+    top: 8px;
+    left: 115px;
+    width: 32px;
+    height: 1px;
+    background-color: #5a5a5a;
+}
+
+input.switch:empty ~ label:after
+{
+    top: 0px;
+    left: 100px;
+    width: 1.4em;
+    height: 8px;
+    bottom: 0.1em;
+    margin-left: 0.1em;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: solid 2px;
+    border-color: #5a5a5a;
+}
+
+.paper-toggle input:checked ~ label:before
+{
+	background-color: #2979FF;
+}
+
+.paper-toggle input:checked ~ label:after
+{
+  left: 140px;
+  background-color: #2979FF;
+  border-color: #2979FF;
+}
+
+
+@media all and (max-width: 568px) {   
+
+#signinForm div {
+  position: relative;
+  width: 300px;
+  margin: auto;
+  margin-top: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300; 
+}
+
+  
+.text-input{
+  font-size: 14px;  font-weight: 300;
+}
+
+.text-input ~ label{
+  font-size: 14px;  font-weight: 300;
+}
+
+}
+
+
+/** Submit 1,2,3 */
+
+/* 1 = BLUE 
+   2 = WHITE 
+   3 = CLEAR 
+*/ 
+
+.submit input {
+  font-size: 13px;
+  position: relative;
+  width: auto;
+  height: auto;
+  display: block;
+  padding: 10px 24px 10px 24px;
+
+  overflow: hidden;
+
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+  
+  background-color: #2979FF;
+  color: #eef2f3;
+  
+  transition: background-color .3s;
+  cursor: pointer;}
+	
+.submit input:hover, .submit3 input:focus {
+  background-color: #448AFF;
+}
+
+.submit input:before {
+
+  display: block;
+  padding-top: 0;
+  border-radius: 100%;
+  background-color: rgba(238, 242, 243, 0.3);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  }
+  
+.submit input:active:before {
+  width: 120%;
+  padding-top: 120%;
+  transition: width .2s ease-out, padding-top .2s ease-out;
+}  
+
+#clear input  { background-color: rgba(255, 255, 255, 0); color: #2978ff; box-shadow: none;}
+#clear input:hover { background-color: rgba(0, 0, 0, 0.0);}
+
+#white input  { background-color: #fff; color: #2978ff; }
+#white input:hover { background-color: rgba(0, 0, 0, 0.1);}
+
+@media all and (max-width: 568px) {   
+
+submit input{  
+  font-size: 11px;
+  padding: 8px 18px 8px 18px;}
+  
+  
+  
+  
+    
+}

@@ -1,0 +1,84 @@
+@viewport{
+    width: device-width;}
+    
+    
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic);  
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,700italic,900);
+
+h1, h2, h3, h4, h5, h6, p { 
+	font-family: 'Roboto', sans-serif;
+	color: #474747;
+}
+
+p { 
+	font-size: 11px;
+	font-weight: 400;
+	text-align: left;
+	margin-left: 2.8em;
+	margin-bottom: 2em;
+	
+	}
+
+html, body{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;   
+  background-repeat:     no-repeat;
+  background-size: cover;
+  background-position: center center;  }
+  
+  .overlay { 
+  background: none;
+  height: auto;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  padding-top: 12.5%;}
+
+a { 
+	text-decoration: none;
+	font-family: 'Roboto';
+}
+
+.remember { margin-left: 2em; }	
+
+
+h3  {
+	 font-weight: 300;
+	 font-size: 22px;
+}
+
+h4  {
+	font-weight: 300;
+	font-size: 20px;
+}
+
+ul li  {
+	list-style: none;
+	text-align: left;
+	color: #474747;
+	font-style: 'Roboto', sans-serif; 
+	font-size: 14px;
+	margin-left: -1em;
+	margin-top: 3em;
+}
+
+.form-box { 
+	margin: auto;
+	color: #000;
+	background: #fff;
+	position: relative;
+	border-radius: 2px;
+	width: 400px;
+	height: 420px;	
+	padding: 1em;
+	padding-top: 2em;
+	z-index: 2000;
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.submit { bottom: -8em; right: -30%; }
